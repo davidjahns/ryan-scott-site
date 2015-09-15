@@ -12,7 +12,7 @@ body {
 	background-attachment: fixed;
 
 	box-sizing: border-box;
-
+	font-weight: 300;
 	letter-spacing: 1px;
 
 	margin-bottom: 60px; //for sticky footer
@@ -47,15 +47,15 @@ nav {
 } //end nav
 
 
-#about {
+h1 {
+	margin-top: 0;
+	margin-bottom: 10px;
 	font-weight: 300;
+	font-size: 4em;
+}
 
-	h1 {
-		margin-top: 0;
-		margin-bottom: 10px;
-		font-weight: 300;
-		font-size: 4em;
-	}
+
+#about {
 
 	p {
 		margin-bottom: 40px;
@@ -80,7 +80,42 @@ nav {
 			color: $white;
 		}
 	}
-}
+} //end about section
+
+#contact {
+	h1 {
+		margin-bottom: 30px;
+	}
+	p {
+		// width: 66%;
+	}
+
+	form {
+		// width: 69%;
+	}
+
+	button {
+		color: $black;
+		display: block;
+		border: none;
+		background: $white;
+		text-transform: uppercase;
+		font-weight: 500;
+		padding-top: 8px;
+		padding-right: 50px;
+		padding-bottom: 8px;
+		padding-left: 50px;
+		margin-bottom: 40px;
+
+		&:focus {
+			outline-color: $yellow;
+		}
+	}
+} //end contact section
+
+
+
+
 
 //helpers for strikethrough on link hover.
 .strike {
@@ -141,6 +176,12 @@ footer {
 
 	#logo, nav {
 		margin-bottom: 30px;
+	}
+
+	#contact {
+		p, form {
+			width: 100%;
+		}
 	}
 }
 
