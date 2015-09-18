@@ -1,6 +1,7 @@
 html { //for sticky footer
   position: relative;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -16,10 +17,60 @@ body {
 	letter-spacing: 1px;
 
 	margin-bottom: 60px; //for sticky footer
+
+	p {
+		letter-spacing: 1.5px;
+		line-height: 1.6em;
+	}
+}
+
+
+//hover transition
+a, 
+button, {
+	-o-transition:.5s;
+  	-ms-transition:.5s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.5s;
+  	transition:.5s;
+}
+
+//fade in animation on sections
+#about-section,
+#contact-section,
+#work-section {
+	opacity: 0;
+	-webkit-animation:fadeIn ease-in 1;  
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:.5s;
+	-moz-animation-duration:.5s;
+	animation-duration:.5s;
+}
+
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+
+p a:hover {
+	color: darken($yellow, 5%);
 }
 
 .wrapper {
 	padding-top: 3%;
+}
+
+#contact-section, #work-section {
+	display: none;
 }
 
 #logo {
@@ -37,9 +88,10 @@ nav {
 		color: $white;
 		font-weight: 300;
 		text-decoration: none;
+		border-bottom: 3px solid transparent;
 
-		&:hover {
-			color: $yellow;
+		&:hover, &:focus {
+			color: $white;
 			border-bottom: 3px solid $yellow;
 		}
 	}
@@ -50,12 +102,13 @@ nav {
 h1 {
 	margin-top: 0;
 	margin-bottom: 10px;
-	font-weight: 300;
+	// font-weight: 300;
 	font-size: 4em;
 }
 
 
-#about {
+
+#about-section {
 
 	p {
 		margin-bottom: 40px;
@@ -82,7 +135,9 @@ h1 {
 	}
 } //end about section
 
-#contact {
+#contact-section {
+
+
 	h1 {
 		margin-bottom: 30px;
 	}
@@ -110,8 +165,18 @@ h1 {
 		&:focus {
 			outline-color: $yellow;
 		}
+
+		&:hover {
+			background-color: lighten($white, 100%);
+		}
 	}
 } //end contact section
+
+
+#work-section {
+
+
+}
 
 
 
@@ -178,7 +243,7 @@ footer {
 		margin-bottom: 30px;
 	}
 
-	#contact {
+	#contact-section {
 		p, form {
 			width: 100%;
 		}

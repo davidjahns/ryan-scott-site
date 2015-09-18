@@ -18,8 +18,8 @@
 	border-radius: 0;
 	background: #f0f0f0;
 	color: #aaa;
-	font-weight: bold;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	// font-weight: bold;
+	font-family: "sofia-pro", Helvetica, Arial, sans-serif;
 	-webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
@@ -96,7 +96,9 @@
 .input__label-content {
 	position: absolute;
 	color: $white;
-	font-weight: 300;
+	top: -13px;
+	font-size: 1.5em;
+	// font-weight: 300;
 }
 
 .input__label::before,
