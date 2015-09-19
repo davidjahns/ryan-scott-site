@@ -4,8 +4,12 @@ $black: #1d1d1e;
 
 
 @import 'html5reset.scss';
-
+@import 'animations.scss';
 @import 'inputs.scss';
-
 @import 'home.scss';
+@import 'about.scss';
+@import 'work.scss';
+@import 'contact.scss';
+
+@import 'media-queries.scss'; //must be last import
 

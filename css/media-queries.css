@@ -1,0 +1,15 @@
+@media screen and (max-width: 992px) {
+  nav a {
+    margin-right: 20px; } }
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("../images/background-flipped-dark-sm.jpg"); }
+
+  body p {
+    font-weight: 500; }
+
+  #logo, nav {
+    margin-bottom: 30px; }
+
+  #contact-section p, #contact-section form {
+    width: 100%; } }

@@ -1,0 +1,16 @@
+#about {
+
+	p {
+		margin-bottom: 40px;
+	}
+
+	.line-rotate {
+		font-size: 4em;
+		display: inline-block;
+		-ms-transform: rotate(25deg); 
+	    -webkit-transform: rotate(25deg); 
+	    transform: rotate(25deg);
+	    margin-bottom: 10px;
+	}
+
+} //end about section

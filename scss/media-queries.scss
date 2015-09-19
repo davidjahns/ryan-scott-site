@@ -1,0 +1,36 @@
+////////////////////////////////
+//media queries
+///////////////////////////////
+
+//between tablet and desktop
+@media screen and (max-width: 992px) {
+	nav a {
+		margin-right: 20px;
+	}
+}
+
+
+//tablet and smaller
+@media screen and (max-width: 768px) {
+
+	body {
+		background-image: url('../images/background-flipped-dark-sm.jpg');
+	}
+
+	body p {
+		font-weight: 500;
+	}
+
+	#logo, nav {
+		margin-bottom: 30px;
+	}
+
+	#contact-section {
+		p, form {
+			width: 100%;
+		}
+	}
+}
+
+//phone only
+

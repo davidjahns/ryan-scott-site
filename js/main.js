@@ -1,20 +1,20 @@
 
-//Navigation hide and show
-$('nav a').click(function(){
-	var id = $(this).attr("id");
+//work section hide and show sliders
+// $('').click(function(){
+// 	var id = $(this).attr("id");
 
-	// $('nav a').css('border-bottom', '3px solid transparent');
-	$('#about-section, #work-section, #contact-section').hide();
+// 	// $('nav a').css('border-bottom', '3px solid transparent');
+// 	$('#work-brand, #work-web, #work-interactive').hide();
 
-	// $(this).css('border-bottom', '3px solid #ebe711');
-	$('#'+id+'-section').show();
+// 	// $(this).css('border-bottom', '3px solid #ebe711');
+// 	$('#work-'+id).show();
 
-});
+// });
 
 
 
-//creating styleable "strikethrough effect" on social links
-$('#socials li a').hover(function(){
+//creating styleable "strikethrough effect" on links
+$('.strike-links li a').hover(function(){
 	$(this).toggleClass('strike');
 });
 

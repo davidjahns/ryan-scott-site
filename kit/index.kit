@@ -37,88 +37,104 @@
 
 		        	<div class="col-sm-5">
 				        <nav>
-				        	<a href="#" id="about">About</a>
-				        	<a href="#" id="work" class="hidden">Work</a>
-				        	<a href="#" id="contact">Contact</a>
+					        <ul class="nav nav-tabs nav-justified" role="tablist">
+							  <li role="presentation"  class="active"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
+							  <li role="presentation"><a href="#work" aria-controls="work" role="tab" data-toggle="tab">Work</a></li>
+							  <li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a></li>
+							</ul>
 				        </nav>
 			        </div>
 		        </div>
 		    </header>
 
 		    <div class="content">
+	    		<div class="tab-content">
 
-		    	<div class="row">
-		    		<!-- <div class="col-sm-7">
-		    			<section id="work">Coming Soon.</section>
-		    		</div>-->
-		    		<div class="col-sm-5 col-sm-offset-7">
-		    			<section id="about-section" class="animated">
-		    				<h1>
-		    					Hi,<br>
-		    					I'm Ryan.<br>
-		    				</h1>
-		    				<span class="line-rotate">/</span>
-		    				<p>I am a creative director and designer focused on building brands and experiences. I have a passion for people; and how aesthetics can positively affect their interactions, environments, and businesses.<p>
+	    			<section id="about" role="tabpanel" class="tab-pane fade in active">
+	    				<div class="row">
+	    					<div class="col-sm-5 col-sm-offset-7">
+	    						<h1>
+			    					Hi,<br>
+			    					I'm Ryan.<br>
+			    				</h1>
+			    				<span class="line-rotate">/</span>
+			    				<p>I am a creative director and designer focused on building brands and experiences. I have a passion for people; and how aesthetics can positively affect their interactions, environments, and businesses.<p>
 
-		    				<ul id="socials">
-		    					<li><a href="http://instagram.com/ryanleescott" target="_blank">Instagram</a></li>
-		    					<li><a href="http://twitter.com/ryanleescott" target="_blank">Twitter</a></li>
-		    					<li><a href="http://dribbble.com/ryanleescott" target="_blank">Dribbble</a></li>
-		    					<li><a href="http://www.rdio.com/people/ryanleescott/" target="_blank">Rdio</a></li>
-		    				</ul>
-		    			</section>
+			    				<ul id="socials" class="strike-links">
+			    					<li><a href="http://instagram.com/ryanleescott" target="_blank">Instagram</a></li>
+			    					<li><a href="http://twitter.com/ryanleescott" target="_blank">Twitter</a></li>
+			    					<li><a href="http://dribbble.com/ryanleescott" target="_blank">Dribbble</a></li>
+			    					<li><a href="http://www.rdio.com/people/ryanleescott/" target="_blank">Rdio</a></li>
+			    				</ul>
+	    					</div>
+	    				</div>
+	    			</section>
 
-		    			<section id="contact-section" class="animated">
-		    				<h1>Let's make something beautiful.</h1>
-		    				<p>If you have a project and are interested in working together, I would love to hear from you.</p>
-		    				<p>Fill out the form below, or feel free to <a href="mailto:ryanleescott@gmail.com">email me</a> directly.</p>
+	    			<section id="work" role="tabpanel" class="tab-pane fade in">
+	    				<div class="row">
+	    					<div class="col-sm-7">
+	    						Work slider here.
+	    					</div>
+	    					<div class="col-sm-5">
+	    						<ul id="" class="strike-links">
+			    					<li><a href="#" target="_blank">Brand</a></li>
+			    					<li><a href="#" target="_blank">Web</a></li>
+			    					<li><a href="#" target="_blank">Interactive</a></li>
+			    				</ul>
+	    					</div>
+	    				</div>
+	    			</section>
+
+	    			<section id="contact" role="tabpanel" class="tab-pane fade in">
+	    				<div class="row">
+	    					<div class="col-sm-5 col-sm-offset-7">
+	    						<h1>Let's make something beautiful.</h1>
+			    				<p>If you have a project and are interested in working together, I would love to hear from you.</p>
+			    				<p>Fill out the form below, or feel free to <a href="mailto:ryanleescott@gmail.com">email me</a> directly.</p>
 
 
-		    				<form action="//formspree.io/ryanleescott@gmail.com" method="POST">
-			    				<!-- name input -->
-			    				<span class="input input">
-									<input class="input__field input__field" type="name" id="name-input" name="Name">
-									<label class="input__label input__label input__label-color-1" for="name-input">
-										<span class="input__label-content input__label-content">Full Name</span>
-									</label>
-								</span>
+			    				<form action="//formspree.io/ryanleescott@gmail.com" method="POST">
+				    				<!-- name input -->
+				    				<span class="input input">
+										<input class="input__field input__field" type="name" id="name-input" name="Name">
+										<label class="input__label input__label input__label-color-1" for="name-input">
+											<span class="input__label-content input__label-content">Full Name</span>
+										</label>
+									</span>
 
-								<!-- email input -->
-								<span class="input input">
-									<input class="input__field input__field" type="email" id="email-input" name="Email">
-									<label class="input__label input__label input__label-color-1" for="email-input">
-										<span class="input__label-content input__label-content">Email</span>
-									</label>
-								</span>
+									<!-- email input -->
+									<span class="input input">
+										<input class="input__field input__field" type="email" id="email-input" name="Email">
+										<label class="input__label input__label input__label-color-1" for="email-input">
+											<span class="input__label-content input__label-content">Email</span>
+										</label>
+									</span>
 
-								<!-- phone input -->
-								<span class="input input">
-									<input class="input__field input__field" type="tel" id="phone-input" name="Phone">
-									<label class="input__label input__label input__label-color-1" for="phone-input">
-										<span class="input__label-content input__label-content">Phone</span>
-									</label>
-								</span>
+									<!-- phone input -->
+									<span class="input input">
+										<input class="input__field input__field" type="tel" id="phone-input" name="Phone">
+										<label class="input__label input__label input__label-color-1" for="phone-input">
+											<span class="input__label-content input__label-content">Phone</span>
+										</label>
+									</span>
 
-								<!-- message input -->
-								<span class="input input">
-									<textarea class="input__field input__field" type="textarea" rows="5" id="message-input" name="Message"></textarea>
-									<label class="input__label input__label input__label-color-1" for="message-input">
-										<span class="input__label-content input__label-content">Message</span>
-									</label>
-								</span>
+									<!-- message input -->
+									<span class="input input">
+										<textarea class="input__field input__field" type="textarea" rows="5" id="message-input" name="Message"></textarea>
+										<label class="input__label input__label input__label-color-1" for="message-input">
+											<span class="input__label-content input__label-content">Message</span>
+										</label>
+									</span>
 
-								<button type="submit" value="send">Submit</button>
-							</form>
-
-		    			</section>
-
-		    			<section id="work-section" class="animated">
-		    				<h1>Coming Soon.</h1>
-		    			</section>
-		    		</div>
-		    	</div>
-		
+									<button type="submit" value="send">Submit</button>
+								</form>
+	    					</div>
+	    				</div>
+	    			</section>
+				</div>
+				<!-- end tab content -->
 		    </div>
+		    <!-- end content -->
 
 
 
@@ -131,7 +147,8 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--<script src="js/bootstrap.min.js"></script>--> <!--old custom bootstrap-->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

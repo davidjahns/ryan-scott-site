@@ -1,0 +1,36 @@
+#contact {
+
+
+	h1 {
+		margin-bottom: 30px;
+	}
+	p {
+		// width: 66%;
+	}
+
+	form {
+		// width: 69%;
+	}
+
+	button {
+		color: $black;
+		display: block;
+		border: none;
+		background: $white;
+		text-transform: uppercase;
+		font-weight: 500;
+		padding-top: 8px;
+		padding-right: 50px;
+		padding-bottom: 8px;
+		padding-left: 50px;
+		margin-bottom: 40px;
+
+		&:focus {
+			outline-color: $yellow;
+		}
+
+		&:hover {
+			background-color: lighten($white, 100%);
+		}
+	}
+} //end contact section

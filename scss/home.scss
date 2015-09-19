@@ -24,42 +24,15 @@ body {
 	}
 }
 
-
-//hover transition
-a, 
-button, {
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition:.5s;
+a {
+	color: $yellow;
 }
 
-//fade in animation on sections
-#about-section,
-#contact-section,
-#work-section {
-	opacity: 0;
-	-webkit-animation:fadeIn ease-in 1;  
-	-moz-animation:fadeIn ease-in 1;
-	animation:fadeIn ease-in 1;
-
-	-webkit-animation-fill-mode:forwards;  
-	-moz-animation-fill-mode:forwards;
-	animation-fill-mode:forwards;
-
-	-webkit-animation-duration:.5s;
-	-moz-animation-duration:.5s;
-	animation-duration:.5s;
+a:hover,
+a:active,
+a:focus {
+	text-decoration: none;
 }
-
-
-
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-
 
 p a:hover {
 	color: darken($yellow, 5%);
@@ -69,34 +42,80 @@ p a:hover {
 	padding-top: 3%;
 }
 
-#contact-section, #work-section {
-	display: none;
-}
 
 #logo {
 	max-width: 110px;
 }
 
 //navigation links
-nav {
+// nav {
 
-	a {
-		display: inline-block;
-		margin-right: 40px;
-		padding-bottom: 5px;
-		text-transform: uppercase;
+// 	a {
+// 		display: inline-block;
+// 		margin-right: 40px;
+// 		padding-bottom: 5px;
+// 		text-transform: uppercase;
+// 		color: $white;
+// 		font-weight: 300;
+// 		text-decoration: none;
+// 		border-bottom: 3px solid transparent;
+
+// 		&:hover, &:focus {
+// 			color: $white;
+// 			border-bottom: 3px solid $yellow;
+// 		}
+// 	}
+
+// } //end nav
+
+.nav-tabs>li>a {
+	border: none;
+	border-radius: none;
+}
+
+.nav-tabs.nav-justified>li>a {
+	text-transform: uppercase;
+	border-bottom: none;
+	color: $white;
+
+	&:hover, &:focus {
+		background: transparent;
 		color: $white;
-		font-weight: 300;
-		text-decoration: none;
-		border-bottom: 3px solid transparent;
-
-		&:hover, &:focus {
-			color: $white;
-			border-bottom: 3px solid $yellow;
-		}
+		border-top: none;
+		border-right: none;
+		border-bottom: 3px solid $yellow;
+		border-left: none;
 	}
+}
 
-} //end nav
+.nav-tabs.nav-justified>.active>a, 
+.nav-tabs.nav-justified>.active>a:focus, 
+.nav-tabs.nav-justified>.active>a:hover {
+	background: transparent;
+	color: $white;
+	border: none;
+}
+
+//uncomment if stop using .nav-justified
+// .nav-tabs>li.active>a, 
+// .nav-tabs>li.active>a:focus, 
+// .nav-tabs>li.active>a:hover,
+// .nav-tabs>li.active>a:active {
+// 	background: transparent;
+// 	color: $white;
+// 	border-top: none;
+// 	border-right: none;
+// 	border-bottom: 3px solid transparent;
+// 	border-left: none;
+// }
+
+.nav-tabs>li.active {
+	border-top: none;
+	border-right: none;
+	border-bottom: 3px solid $yellow;
+	border-left: none;
+}
+
 
 
 h1 {
@@ -105,80 +124,6 @@ h1 {
 	// font-weight: 300;
 	font-size: 4em;
 }
-
-
-
-#about-section {
-
-	p {
-		margin-bottom: 40px;
-	}
-
-	.line-rotate {
-		font-size: 4em;
-		display: inline-block;
-		-ms-transform: rotate(25deg); 
-	    -webkit-transform: rotate(25deg); 
-	    transform: rotate(25deg);
-	    margin-bottom: 10px;
-	}
-
-	#socials {
-
-		list-style: none;
-		padding-left: 0;
-		font-size: 1.2em;
-
-		a {
-			color: $white;
-		}
-	}
-} //end about section
-
-#contact-section {
-
-
-	h1 {
-		margin-bottom: 30px;
-	}
-	p {
-		// width: 66%;
-	}
-
-	form {
-		// width: 69%;
-	}
-
-	button {
-		color: $black;
-		display: block;
-		border: none;
-		background: $white;
-		text-transform: uppercase;
-		font-weight: 500;
-		padding-top: 8px;
-		padding-right: 50px;
-		padding-bottom: 8px;
-		padding-left: 50px;
-		margin-bottom: 40px;
-
-		&:focus {
-			outline-color: $yellow;
-		}
-
-		&:hover {
-			background-color: lighten($white, 100%);
-		}
-	}
-} //end contact section
-
-
-#work-section {
-
-
-}
-
-
 
 
 
@@ -196,8 +141,16 @@ h1 {
     top: 50%;
 }
 
+.strike-links {
 
+	list-style: none;
+	padding-left: 0;
+	font-size: 1.2em;
 
+	a {
+		color: $white;
+	}
+}
 
 
 
@@ -212,42 +165,6 @@ footer {
   bottom: 0;
   width: 100%;
   height: 60px;
-}
-
-
-
-////////////////////////////////
-//media queries
-///////////////////////////////
-
-//between tablet and desktop
-@media screen and (max-width: 992px) {
-	nav a {
-		margin-right: 20px;
-	}
-}
-
-
-//tablet and smaller
-@media screen and (max-width: 768px) {
-
-	body {
-		background-image: url('../images/background-flipped-dark-sm.jpg');
-	}
-
-	body p {
-		font-weight: 500;
-	}
-
-	#logo, nav {
-		margin-bottom: 30px;
-	}
-
-	#contact-section {
-		p, form {
-			width: 100%;
-		}
-	}
 }
 
 
