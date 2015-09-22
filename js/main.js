@@ -29,3 +29,31 @@ $('.input__field').change(function(){
 });
 
 
+//submit form validation
+$('#contact-form').submit(function(e){
+
+	if( $('#email-input').val().length === 0 ) {
+		$('#email-warning').removeClass('hidden');
+		e.preventDefault();
+	}
+
+	if( $('#message-input').val().length === 0 ) {
+		$('#message-warning').removeClass('hidden');
+		e.preventDefault();
+	}
+
+});
+
+$('#email-input').keypress(function(){
+	if( $(this).val().length !== 0 ) {
+		$('#email-warning').addClass('hidden');
+	}
+});
+
+$('#message-input').keypress(function(){
+	if( $(this).val().length !== 0 ) {
+		$('#message-warning').addClass('hidden');
+	}
+});
+
+

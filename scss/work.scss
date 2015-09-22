@@ -1,3 +1,46 @@
 #work {
 
-}
+	#work-links {
+		margin-top: 50px;
+		font-size: 4em;
+
+		li {
+			margin-bottom: 20px;
+		}
+
+		.strike::before {
+			border-bottom: 5px solid $yellow;
+			top: 55%;
+		}
+	}
+
+	.carousel {
+		margin-top: -70px;
+		margin-left: 25px;
+		padding: 50px;
+		background-color: $black;
+		z-index: 100;
+		margin-bottom: 50px;
+	}
+
+	.carousel-indicators {
+		bottom: -20px;
+
+		li {
+			margin-right: 10px;
+		}
+	}
+
+	.carousel-control.right,
+	.carousel-control.left {
+		background-image: none;
+	}
+
+	.glyphicon-chevron-right {
+		margin-right: -60px;
+	}
+
+	.glyphicon-chevron-left {
+		margin-left: -60px;
+	}
+}	

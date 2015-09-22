@@ -411,7 +411,8 @@ body {
     letter-spacing: 1.5px;
     line-height: 1.6em; }
 
-a {
+a,
+p.validate {
   color: #ebe711; }
 
 a:hover,
@@ -427,31 +428,32 @@ p a:hover {
 
 #logo {
   max-width: 110px; }
+  #logo g {
+    z-index: 1000; }
 
-.nav-tabs > li > a {
-  border: none;
-  border-radius: none; }
-
-.nav-tabs.nav-justified > li > a {
-  text-transform: uppercase;
+.nav-tabs {
   border-bottom: none;
-  color: #fafafa; }
-  .nav-tabs.nav-justified > li > a:hover, .nav-tabs.nav-justified > li > a:focus {
-    background: transparent;
+  text-transform: uppercase; }
+  .nav-tabs > li a {
     color: #fafafa;
+    margin-right: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    border-top: none;
+    border-right: none;
+    border-bottom: 3px solid transparent;
+    border-left: none; }
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #fafafa;
+    background-color: transparent;
     border-top: none;
     border-right: none;
     border-bottom: 3px solid #ebe711;
     border-left: none; }
 
-.nav-tabs.nav-justified > .active > a,
-.nav-tabs.nav-justified > .active > a:focus,
-.nav-tabs.nav-justified > .active > a:hover {
-  background: transparent;
-  color: #fafafa;
-  border: none; }
-
-.nav-tabs > li.active {
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: transparent;
   border-top: none;
   border-right: none;
   border-bottom: 3px solid #ebe711;
@@ -502,6 +504,33 @@ footer {
   transform: rotate(25deg);
   margin-bottom: 10px; }
 
+#work #work-links {
+  margin-top: 50px;
+  font-size: 4em; }
+  #work #work-links li {
+    margin-bottom: 20px; }
+  #work #work-links .strike::before {
+    border-bottom: 5px solid #ebe711;
+    top: 55%; }
+#work .carousel {
+  margin-top: -70px;
+  margin-left: 25px;
+  padding: 50px;
+  background-color: #1d1d1e;
+  z-index: 100;
+  margin-bottom: 50px; }
+#work .carousel-indicators {
+  bottom: -20px; }
+  #work .carousel-indicators li {
+    margin-right: 10px; }
+#work .carousel-control.right,
+#work .carousel-control.left {
+  background-image: none; }
+#work .glyphicon-chevron-right {
+  margin-right: -60px; }
+#work .glyphicon-chevron-left {
+  margin-left: -60px; }
+
 #contact h1 {
   margin-bottom: 30px; }
 #contact button {
@@ -522,11 +551,15 @@ footer {
     background-color: white; }
 
 @media screen and (max-width: 992px) {
-  nav a {
-    margin-right: 20px; } }
+  .nav-tabs li a {
+    margin-right: 30px; } }
 @media screen and (max-width: 768px) {
   body {
-    background-image: url("../images/background-flipped-dark-sm.jpg"); }
+    background-image: url("../images/background-flipped-dark-sm.jpg");
+    background-position: top left; }
+
+  h1 {
+    font-size: 2em; }
 
   body p {
     font-weight: 500; }
@@ -534,5 +567,8 @@ footer {
   #logo, nav {
     margin-bottom: 30px; }
 
-  #contact-section p, #contact-section form {
-    width: 100%; } }
+  #contact p, #contact form {
+    width: 100%; }
+
+  #about .line-rotate {
+    font-size: 2em; } }

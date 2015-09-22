@@ -24,9 +24,11 @@ body {
 	}
 }
 
-a {
+a,
+p.validate {
 	color: $yellow;
 }
+
 
 a:hover,
 a:active,
@@ -45,6 +47,10 @@ p a:hover {
 
 #logo {
 	max-width: 110px;
+
+	g {
+		z-index: 1000;
+	}
 }
 
 //navigation links
@@ -68,19 +74,26 @@ p a:hover {
 
 // } //end nav
 
-.nav-tabs>li>a {
-	border: none;
-	border-radius: none;
-}
-
-.nav-tabs.nav-justified>li>a {
-	text-transform: uppercase;
+.nav-tabs {
 	border-bottom: none;
-	color: $white;
+	text-transform: uppercase;
 
-	&:hover, &:focus {
-		background: transparent;
+	&>li a {
 		color: $white;
+		margin-right: 50px;
+		padding-left: 0;
+		padding-right: 0;
+		border-top: none;
+		border-right: none;
+		border-bottom: 3px solid transparent;
+		border-left: none;
+	}
+
+	&>li.active>a, 
+	&>li.active>a:focus, 
+	&>li.active>a:hover {
+		color: $white;
+		background-color: transparent;
 		border-top: none;
 		border-right: none;
 		border-bottom: 3px solid $yellow;
@@ -88,33 +101,17 @@ p a:hover {
 	}
 }
 
-.nav-tabs.nav-justified>.active>a, 
-.nav-tabs.nav-justified>.active>a:focus, 
-.nav-tabs.nav-justified>.active>a:hover {
-	background: transparent;
-	color: $white;
-	border: none;
-}
 
-//uncomment if stop using .nav-justified
-// .nav-tabs>li.active>a, 
-// .nav-tabs>li.active>a:focus, 
-// .nav-tabs>li.active>a:hover,
-// .nav-tabs>li.active>a:active {
-// 	background: transparent;
-// 	color: $white;
-// 	border-top: none;
-// 	border-right: none;
-// 	border-bottom: 3px solid transparent;
-// 	border-left: none;
-// }
-
-.nav-tabs>li.active {
+.nav>li>a:focus, 
+.nav>li>a:hover {
+	background-color: transparent;
 	border-top: none;
 	border-right: none;
 	border-bottom: 3px solid $yellow;
 	border-left: none;
 }
+
+
 
 
 
