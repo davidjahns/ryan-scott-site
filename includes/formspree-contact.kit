@@ -1,0 +1,37 @@
+<form id="contact-form" action="//formspree.io/ryanleescott@gmail.com" method="POST">
+  <!-- name input -->
+  <span class="input input">
+  <input class="input__field input__field" type="name" id="name-input" name="Name">
+  <label class="input__label input__label input__label-color-1" for="name-input">
+    <span class="input__label-content input__label-content">Full Name</span>
+  </label>
+</span>
+
+<!-- email input -->
+<span class="input input">
+  <p id="email-warning" class="validate hidden">Please fill out this field.</p>
+  <input class="input__field input__field" type="email" id="email-input" name="Email">
+  <label class="input__label input__label input__label-color-1" for="email-input">
+    <span class="input__label-content input__label-content">Email</span>
+  </label>
+</span>
+
+<!-- phone input -->
+<span class="input input">
+  <input class="input__field input__field" type="tel" id="phone-input" name="Phone">
+  <label class="input__label input__label input__label-color-1" for="phone-input">
+    <span class="input__label-content input__label-content">Phone</span>
+  </label>
+</span>
+
+<!-- message input -->
+<span class="input input">
+  <p id="message-warning" class="validate hidden">Please fill out this field.</p>
+  <textarea class="input__field input__field" type="textarea" rows="5" id="message-input" name="Message"></textarea>
+  <label class="input__label input__label input__label-color-1" for="message-input">
+    <span class="input__label-content input__label-content">Message</span>
+  </label>
+</span>
+
+<button type="submit" value="send">Submit</button>
+</form>

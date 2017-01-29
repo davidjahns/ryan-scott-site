@@ -3,15 +3,27 @@
 ///////////////////////////////
 
 //between tablet and desktop and smaller
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
 	.nav-tabs li a {
 		margin-right: 30px;
+	}
+
+	#work {
+		#work-links {
+			margin-top: 30px;
+			font-size: 3em;
+		}
+
+		.carousel {
+			margin-top: -40px;
+			padding: 15px;
+		}
 	}
 }
 
 
 //tablet and smaller
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
 	body {
 		background-image: url('../images/background-flipped-dark-sm.jpg');
@@ -40,7 +52,48 @@
 	#about .line-rotate {
 		font-size: 2em;
 	}
+
+	#work {
+		.carousel {
+			margin-left: initial;
+			margin-top: 20px;
+
+			padding: 25px;
+		}
+
+		#work-links {
+			margin-bottom: 50px;
+			font-size: 2em;
+
+			.strike::before {
+				border-bottom: 3px solid $yellow;
+			}
+				
+		}
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	#work {
+		.carousel {
+			padding: 15px;
+		}
+
+		#work-links {
+			font-size: 1.2em;
+
+			.strike::before {
+				border-bottom: 2px solid $yellow;
+				// top: 55%;
+			}
+		}
+	}
+
 }
 
 //phone only
+
+
+
 

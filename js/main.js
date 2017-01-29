@@ -1,15 +1,16 @@
 
 //work section hide and show sliders
-// $('').click(function(){
-// 	var id = $(this).attr("id");
+$('#work-links a').click(function(){
+	var id = $(this).attr("id");
+	console.log(id);
 
-// 	// $('nav a').css('border-bottom', '3px solid transparent');
-// 	$('#work-brand, #work-web, #work-interactive').hide();
+	// $('nav a').css('border-bottom', '3px solid transparent');
+	$('#brand-carousel, #web-carousel, #interactive-carousel').hide();
 
-// 	// $(this).css('border-bottom', '3px solid #ebe711');
-// 	$('#work-'+id).show();
+	// $(this).css('border-bottom', '3px solid #ebe711');
+	$('#'+id + "-carousel").show();
 
-// });
+});
 
 
 
